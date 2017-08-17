@@ -1,0 +1,7 @@
+{% extends "myapp/header.html" %}
+{% block content%}
+	{% for c in content %}
+		<p>{{c}}</p>
+	{% endfor %}
+<p> <img src="../../../../static/myapp/img/email.png" class="responsive-img" style='max-height:100px;' alt="email"></img></p>
+{% endblock%}

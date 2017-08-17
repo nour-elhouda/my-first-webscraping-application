@@ -1,0 +1,23 @@
+{% extends "myapp/header.html" %}
+{% block content%}
+<p>
+vueillez choisir le site à scraper</p> <br>
+	
+<table class="table"> 
+                 
+         <thead> 
+                 <tr> 
+                 <th> le site</th> 
+                 <th>le lien</th> 
+                 </tr> 
+         </thead> 
+         <tbody> 
+         		{% for lien in object_list%}
+                 <tr> 
+                 <td>{{lien.title}}</td> 
+                 <td> <a href="/scraping/{{lien.id}}">{{lien.body}}</a></td> 
+                 </tr> 
+                 {%endfor%}
+        </tbody> 
+</table>
+{% endblock%}
